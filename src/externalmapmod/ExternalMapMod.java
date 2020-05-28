@@ -1,10 +1,12 @@
 package externalmapmod;
 
+//import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.gotti.wurmunlimited.modloader.ReflectionUtil;
 import org.gotti.wurmunlimited.modloader.classhooks.HookManager;
+//import org.gotti.wurmunlimited.modloader.interfaces.Configurable;
 import org.gotti.wurmunlimited.modloader.interfaces.Initable;
 import org.gotti.wurmunlimited.modloader.interfaces.WurmClientMod;
 
@@ -15,7 +17,7 @@ import com.wurmonline.client.renderer.gui.SkloMapWindow;
 import javassist.ClassPool;
 import javassist.CtClass;
 
-public class ExternalMapMod implements WurmClientMod, Initable
+public class ExternalMapMod implements WurmClientMod, Initable//, Configurable
 {
 	public static HeadsUpDisplay mHud;
 	public static World mWorld;
@@ -30,6 +32,13 @@ public class ExternalMapMod implements WurmClientMod, Initable
 		}
 		return false;
 	}
+
+//	@Override
+//	public void configure(Properties pProperties) 
+//	{
+//		mMapName = properties.getProperty("defaultServer");
+//		Integer.getInteger( pProperties.getProperty( "size" ) );
+//	}
 
 	@Override
 	public void init() 
