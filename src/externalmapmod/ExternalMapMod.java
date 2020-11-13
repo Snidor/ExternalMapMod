@@ -31,8 +31,8 @@ public class ExternalMapMod implements WurmClientMod, Initable
 		{
 			if ( pData.length == 2) 
 			{
-				int lSize = Integer.parseInt( pData[1] );
-				( new ExternalMapWindow( mWorld, lSize, mServerNames, mMapLinks, mServerSizes ) ).start();
+				mSize = Integer.parseInt( pData[1] );
+				( new ExternalMapWindow( mWorld, mSize, mServerNames, mMapLinks, mServerSizes ) ).start();
 				return true;				
 			}
 		}
